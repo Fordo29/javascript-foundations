@@ -4,7 +4,7 @@ class Vampire {
     if (pet === undefined) {
       this.pet = "bat";
     } else {
-      this.pet = pet;
+      this.pet = pet; 
     }
   }
 }
