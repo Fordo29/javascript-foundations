@@ -10,7 +10,7 @@ class Centaur {
 
   shootBow() {
     this.actionCount++;
-    if(this.actionCount <= 2 || this.standing === false) {
+    if(this.actionCount <= 2 && this.layingDown === false && this.standing === true) {
       return 'Twang!!!'
     } else {
       this.cranky = true;
@@ -20,7 +20,7 @@ class Centaur {
 
   run() {
     this.actionCount++
-    if(this.actionCount <= 2 || this.standing === false) {
+    if(this.actionCount <= 2 && this.layingDown === false && this.standing === true) {
       return 'Clop clop clop clop!!!'
     } else {
       this.cranky = true;
@@ -28,7 +28,13 @@ class Centaur {
     }
   }
   sleep() {
-    return 'NO!'
+    if(!this.layingDown) {
+      return 'NO!'
+    } else {
+      this.actionCount = 0;
+      this.cranky = false;
+      return 'ZZZZ'
+    }
   }
   layDown() {
     this.standing = false;
@@ -37,6 +43,14 @@ class Centaur {
   standUp() {
     this.standing = true;
     this.layingDown = false;
+  }
+  drinkPotion() {
+    if(!this.layingDown) {
+      this.cranky = false;
+      this.actionCount = 0;
+    } else {
+      return 'Not while I\'m laying down!'
+    }
   }
 }
 
