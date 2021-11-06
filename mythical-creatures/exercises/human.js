@@ -5,11 +5,11 @@ class Human {
   }
 
   noticesOgre(){
-    if (this.encounterCounter.length % 3 === 0) {
+    if (this.encounterCounter % 3 === 0) {
       return true
     }
       return false
   }
 }
-
+console.log(6 % 3);
 module.exports = Human;
