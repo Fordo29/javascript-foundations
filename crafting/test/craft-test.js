@@ -4,7 +4,7 @@ var assert = require('chai').assert;
 
 describe("Craft", function() {
 
-  it.skip('should have a type', function() {
+  it('should have a type', function() {
     var crossStitch = new Craft({ type: 'cross stitch' });
     var macrame = new Craft({ type: 'macrame' });
 
@@ -12,7 +12,7 @@ describe("Craft", function() {
     assert.equal(macrame.name, 'macrame');
   })
 
-  it.skip('should have a list of materials', function() {
+  it('should have a list of materials', function() {
     var canvas = new Material('canvas', 15, 1, 'sheets');
     var paint = new Material('paint', 4, 3, 'bottles');
     var painting = new Craft({ type: 'painting', materials: [ canvas, paint ]});
@@ -20,7 +20,7 @@ describe("Craft", function() {
     assert.deepEqual(painting.materials, [ canvas, paint ]);
   })
 
-  it.skip('should start as incomplete', function() {
+  it('should start as incomplete', function() {
     var ink = new Material('ink', 9, 2, 'bottles');
     var paper = new Material('paper', .25, 10, 'sheets');
     var drawing = new Craft({ type: 'drawing', materials: [ ink, paper ]});
