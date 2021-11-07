@@ -9,12 +9,7 @@ class Ogre {
   }
 
   swingAt(human) {
-    if (human.noticesOgre() === true) {
-       this.swings++;
-       return this.swings
-    } else {
-      return this.swings
-    }
+    this.swings++;
   }
 }
 

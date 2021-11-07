@@ -5,12 +5,13 @@ class Human {
   }
 
   noticesOgre(){
-    if ((this.encounterCounter % 3) === 0) {
+    if (this.encounterCounter === 0) {
+      return false;
+    } else if (this.encounterCounter % 3 === 0) {
       return true;
-    } else if ((this.encounterCounter % 3) !== 0) {
+    } else {
       return false;
     }
-    // return true;
   }
 }
 module.exports = Human;
