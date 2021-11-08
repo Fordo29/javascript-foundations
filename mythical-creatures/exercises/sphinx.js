@@ -15,15 +15,19 @@ class Sphinx {
   }
 
   attemptAnswer(guess) {
+    if(this.riddles.length === 1 && this.riddles[0].answer === guess) {
+      this.riddles.splice(0, 1);
+      return `PSSSSSSS THIS HAS NEVER HAPPENED, HOW DID YOU KNOW THE ANSWER WAS "${guess}"???`
+    }
     for(var i = 0; i < this.riddles.length; i++) {
       if(this.riddles[i].answer === guess) {
         this.riddles.splice(i, 1);
         return 'That wasn\'t that hard, I bet you don\'t get the next one'
-      } else {
-        this.heroesEaten++;
       }
     }
-  }
+    this.heroesEaten++;
+    }
+
 }
 
 module.exports = Sphinx;
