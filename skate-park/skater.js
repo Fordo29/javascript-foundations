@@ -8,12 +8,15 @@ class Skater {
   }
 
   practice(trick) {
-    for(var i = 0; i < this.tricks.length; i++) {
-    if (this.tricks[i] === !trick) {
-      this.frustration++
-    }
-    }
+    if (!this.tricks[trick]) {
+     this.frustration++
+   }
+    if (this.frustration === 3) {
+     this.tricks[trick] = true;
+     this.frustration = 0;
+     return `I just learned to ${trick}!!!`
+   }
   }
-}
 
+}
 module.exports = Skater;
