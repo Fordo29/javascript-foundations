@@ -12,10 +12,11 @@ class Part {
   }
 
   repair() {
-    if (this.brokenCount < 1) {
+    if (this.brokenCount === 1) {
       this.broken = false;
     } else {
-      
+      this.broken = true;
+      return `This ${this.type} has seen better days, we\'ll need a brand new one!`
     }
 
   }

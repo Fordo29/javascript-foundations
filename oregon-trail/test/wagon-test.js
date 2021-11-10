@@ -5,7 +5,7 @@ var Gear = require('../src/gear.js');
 var Settler = require('../src/settler.js');
 
 describe('Wagon', function() {
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var voyager = new Wagon({ name: 'Voyager' });
     var newHorizons = new Wagon({ name: 'New Horizons' });
 
@@ -13,13 +13,13 @@ describe('Wagon', function() {
     assert.equal(newHorizons.title, 'New Horizons');
   });
 
-  it.skip('should have no wheels by default', function() {
+  it('should have no wheels by default', function() {
     var wagon = new Wagon({ name: 'New Horizons' });
 
     assert.deepEqual(wagon.wheels, []);
   });
 
-  it.skip('should be able to be constructed with wheels', function() {
+  it('should be able to be constructed with wheels', function() {
     var wheel1 = new Part('wheel');
     var wheel2 = new Part('wheel');
     var wagon = new Wagon({ name: 'New Horizons', wheels: [wheel1, wheel2] });
@@ -27,13 +27,13 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.wheels, [wheel1, wheel2]);
   });
 
-  it.skip('should have no axles by default', function() {
+  it('should have no axles by default', function() {
     var wagon = new Wagon({ name: 'New Horizons' });
 
     assert.deepEqual(wagon.axles, []);
   });
 
-  it.skip('should be able to be constructed with axles', function() {
+  it('should be able to be constructed with axles', function() {
     var axle1 = new Part('axle');
     var axle2 = new Part('axle');
     var wagon = new Wagon({ name: 'New Horizons', axles: [axle1, axle2] });
@@ -41,13 +41,13 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.axles, [axle1, axle2]);
   });
 
-  it.skip('should have no oxen by default', function() {
+  it('should have no oxen by default', function() {
     var wagon = new Wagon({ name: 'New Horizons' });
 
     assert.deepEqual(wagon.oxen, []);
   });
 
-  it.skip('should be able to be constructed with oxen', function() {
+  it('should be able to be constructed with oxen', function() {
     var ox1 = new Part('ox');
     var ox2 = new Part('ox');
     var wagon = new Wagon({ name: 'New Horizons', oxen: [ox1, ox2] });
@@ -55,55 +55,55 @@ describe('Wagon', function() {
     assert.deepEqual(wagon.oxen, [ox1, ox2]);
   });
 
-  it.skip('should have no yokes by default', function() {
+  it('should have no yokes by default', function() {
     var wagon = new Wagon({ name: 'New Horizons' });
 
     assert.deepEqual(wagon.yokes, []);
   });
 
-  it.skip('should be able to be constructed with yokes', function() {
+  it('should be able to be constructed with yokes', function() {
     var yoke = new Part('yoke');
     var wagon = new Wagon({ name: 'New Horizons', yokes: [yoke] });
 
     assert.deepEqual(wagon.yokes, [yoke]);
   });
 
-  it.skip('should be able to have food', function() {
+  it('should be able to have food', function() {
     var food = new Gear('food', 10);
     var wagon = new Wagon({ name: 'New Horizons', food: food });
 
     assert.equal(wagon.food, food);
   });
 
-  it.skip('should be able to have ammunition', function() {
+  it('should be able to have ammunition', function() {
     var ammunition = new Gear('ammunition', 1000);
     var wagon = new Wagon({ name: 'New Horizons', ammunition: ammunition });
 
     assert.equal(wagon.ammunition, ammunition);
   });
 
-  it.skip('should be able to have ammunition of a different quantity', function() {
+  it('should be able to have ammunition of a different quantity', function() {
     var ammunition = new Gear('ammunition', 2000);
     var wagon = new Wagon({ name: 'New Horizons', ammunition: ammunition });
 
     assert.equal(wagon.ammunition, ammunition);
   });
 
-  it.skip('should be able to have clothes', function() {
+  it('should be able to have clothes', function() {
     var clothes = new Gear('clothes', 5);
     var wagon = new Wagon({ name: 'New Horizons', clothes: clothes });
 
     assert.equal(wagon.clothes, clothes);
   });
 
-  it.skip('should be able to have clothes of a different quantity', function() {
+  it('should be able to have clothes of a different quantity', function() {
     var clothes = new Gear('clothes', 8);
     var wagon = new Wagon({ name: 'New Horizons', clothes: clothes });
 
     assert.equal(wagon.clothes, clothes);
   });
 
-  it.skip('should be able to add a wheel', function() {
+  it('should be able to add a wheel', function() {
     var wheel1 = new Part('wheel');
     var wheel2 = new Part('wheel');
     var wagon = new Wagon({ name: 'Voyager', wheels: [wheel1] });
